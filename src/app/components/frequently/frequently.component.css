@@ -1,0 +1,9 @@
+.freq .accordion-body {
+  background-color: var(--dark-color);
+  color: #fff;
+}
+
+.freq .accordion-header button {
+  background-color: var(--main-color);
+  color: var(--dark-color);
+}

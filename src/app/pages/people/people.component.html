@@ -1,0 +1,23 @@
+<app-bread-crump [bgImage]="currentBgImage" [breadCrumpHeading]="currentBreadCrumpHeading"
+  [breadcrumbItemActive]="currentBreadcrumbItemActive"></app-bread-crump>
+
+<!-- ====================Start team ============================ -->
+<section class="team">
+
+  <div class="container">
+    <div class="box row">
+      <div class="card col-md-4 mb-5" *ngFor="let one of people" [hidden]="one.profile_path==null">
+        <div>
+          <div class="imgBx">
+            <img class="img-fluid" src="https://image.tmdb.org/t/p/w500/{{one.profile_path}}" alt="">
+          </div>
+          <div class="details">
+            <h2>{{one.name}}<br><span>{{one.known_for_department}}</span></h2>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+<!-- ====================End team ============================ -->

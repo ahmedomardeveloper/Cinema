@@ -1,0 +1,52 @@
+<!-- <app-bread-crump [breadCrumpHeading]="currentBreadCrumpHeading" [bgImage]="currentBgImage"
+  [breadcrumbItemActive]="currentBreadcrumbItemActive">
+</app-bread-crump>
+
+
+
+
+<div class="trending-movies section-m">
+  <div class="container">
+    <div class="search py-2">
+      <div class="form-group w-75 m-auto">
+        <input [(ngModel)]="keyword" type="text" class="form-control my-4" name="" id="" aria-describedby="helpId"
+          placeholder="which movie do you want to watch?">
+        <h2 class="text-white">You search For : {{keyword}}</h2>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-3 col-sm-6 mb-3" *ngFor="let movie of trendingAll|serach:keyword ;let i=index">
+        <a [routerLink]="['/movieDetails/',mediatype,currentPage,movie.id]" class="text-decoration-none">
+          <div class="movie">
+            <img class="img-fluid rounded" src="https://image.tmdb.org/t/p/w500/{{ movie['poster_path'] }}" alt="">
+            <div class="mt-2">
+              <span class="text-muted"> {{movie.release_date == undefined ? (movie.first_air_date | getyear)
+                :(movie.release_date | getyear)}}
+              </span>
+            </div>
+            <h3 class="fs-6 text-white"> {{ movie.original_title == undefined ? movie.original_name :
+              movie.original_title }}
+            </h3>
+            <p class="text-muted">
+              {{movie['overview'] |seemore:55 }}
+            </p>
+          </div>
+        </a>
+      </div>
+
+    </div>
+  </div>
+  <div class="container pagination">
+    <div class="d-flex justify-content-between w-100 mx-auto my-4">
+      <div (click)="prev()" class="brdr-radius text-white pageNum p-3"><i class="fas fa-arrow-alt-circle-left    "></i>
+      </div>
+      <div (click)="changePage(pageNumber)" class="brdr-radius text-white pageNum p-3"
+        *ngFor="let pageNumber of pageNumbers">
+        {{pageNumber}}
+      </div>
+      <div (click)="next()" class="brdr-radius text-white pageNum p-3"><i class="fas fa-arrow-alt-circle-right    "></i>
+      </div>
+
+    </div>
+  </div>
+</div> -->

@@ -1,0 +1,41 @@
+<div class="trending-movies py-5">
+  <div class="banner-trending"></div>
+  <div class="trending-movie-container-content">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3">
+          <div class="brdr w-25"></div>
+          <div class="text-white py-4">
+            <h2 class="mb-3">Popular <br> Movies <br>
+              to Watch Now</h2>
+            <h6 class="text-muted mt-2">Most watched movies by days
+            </h6>
+          </div>
+
+          <div class="brdr w-75 mb-4"></div>
+        </div>
+        <div class="col-md-3 col-sm-6 mb-3" *ngFor="let movie of allTrendingMovies;let i=index" [hidden]="i>6">
+          <a [routerLink]="['/movieDetails/',mediatype,1,movie['id'] ]" class="text-decoration-none">
+            <div class="movie">
+              <img class="img-fluid rounded" src="https://image.tmdb.org/t/p/w500/{{ movie['poster_path'] }}" alt="">
+              <div class="mt-2">
+                <span class="text-muted">{{movie['release_date'] | date: 'd/M/y'}} </span>
+                <!-- <span class="text-muted">Action</span> -->
+              </div>
+              <h3 class="fs-6">{{movie['title'] | uppercase}}</h3>
+              <p class="text-muted">
+                {{movie['overview'] |seemore:55 }}
+              </p>
+            </div>
+          </a>
+        </div>
+        <div class="col-md-12">
+          <a routerLink="movies" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact:true}"
+            class="d-block brdr-radius w-25 m-auto p-2 text-white text-decoration-none text-center mt-1 btn-violet-outline">View
+            All
+            Movies</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,17 @@
+.trending-movies h3 {
+  color: var(--light-color);
+}
+
+@media (max-width:767px) {
+  .trending-movies a {
+    font-size: 16px;
+  }
+
+}
+
+@media (max-width:590px) {
+  .trending-movies a {
+    font-size: 12px;
+  }
+
+}
