@@ -149,17 +149,17 @@
   font-weight: 100;
 }
 
-.sidekick:before, .sidekick:after {
+.sidekick::before, .sidekick::after {
   font-family: Calibri;
   color: #039be5;
   font-size: 34px;
 }
 
-.sidekick:before {
+.sidekick::before {
   content: '\201e'
 }
 
-.sidekick:after {
+.sidekick::after {
   content: '\201c';
 }
 
@@ -169,7 +169,7 @@
   top: 50%
 }
 
-.sidekick cite:before {
+.sidekick cite::before {
   content: ' \2015 '
 }
 
@@ -233,7 +233,6 @@
   width: 90%;
   height: 80%;
   margin: 5%;
-  background: var(--image) center center no-repeat;
   background-size: cover;
   box-shadow: inset 0 0 5px rgba(34, 34, 34, 0.35);
   border-radius: 2px;
@@ -243,9 +242,30 @@
   will-change: opacity;
 }
 
+.card:nth-child(1):before {
+  background: url('../../../assets/images/1.jpg') center center no-repeat;
+  background-size: cover;
+}
+
+.card:nth-child(2):before {
+  background: url('../../../assets/images/2.jpg') center center no-repeat;
+  background-size: cover;
+
+}
+
+.card:nth-child(3):before {
+  background: url('../../../assets/images/3.jpg') center center no-repeat;
+  background-size: cover;
+}
+
+.card:nth-child(4):before {
+  background: url('../../../assets/images/4.jpg') center center no-repeat;
+  background-size: cover;
+}
+
 .card:after {
   display: block;
-  content: var(--caption);
+  content: "";
   font-weight: 500;
   color: #555;
   font-size: 3vmin;
