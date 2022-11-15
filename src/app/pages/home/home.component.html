@@ -1,33 +1,14 @@
 <app-hero></app-hero>
 <app-trending-movies></app-trending-movies>
 <div class="quote bg-white py-5">
-  <h2 class="text-center fs-1" style="color:var(--violet-color)">Learn From Quotes</h2>
-  <div style="background-color: var(--dark-color);">
-    <section class="component mt-5">
-      <blockquote class="callout quote EN text-white w-100">
-        {{randQuote.text}}.
-        <cite> - {{randQuote.author}}</cite>
+  <h2 class="text-center fs-1">Learn From Quotes</h2>
+  <div>
+    <section class="mt-3 text-center">
+      <blockquote class="text-success lh-lg">
+        "
+        {{randQuote.text}}. "<br>
+        <cite class="text-muted"> - {{randQuote.author}}</cite>
       </blockquote>
     </section>
   </div>
 </div>
-
-
-
-<!-- <div class="team-sec">
-  <h2 class="heading">Ahmed Omar</h2>
-  <div class="card-container">
-    <div class="card" style="--angle: -5deg; --x: 5%; --y: 15%; --caption: 'Berlin in 2009'">
-    </div>
-
-    <div class="card" style="--angle: -1deg; --x: -10%; --y: -20%; --caption: 'London, 2001'">
-    </div>
-
-    <div class="card" style="--angle: -4deg; --x: -20%; --y: 5%; --caption: 'Los Angeles - 2004'">
-    </div>
-
-    <div class="card" style="--angle: 7deg; --x: 10%; --y: -7%; --caption: 'Venice, 1999'">
-    </div>
-
-  </div>
-</div> -->
